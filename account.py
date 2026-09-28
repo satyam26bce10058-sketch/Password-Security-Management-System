@@ -19,3 +19,14 @@ def create_account():
         if not valid:
             print(message)
             continue
+        strength = check_strength(password)
+        print("Password Strength:", strength)
+        if strength == "Weak":
+            print("\nPassword is too weak.")
+            suggestions = password_suggestions(password)
+            for suggestion in suggestions:
+                print("-", suggestion)
+            continue
+        break
+    save_user(username, password)
+    print("\nAccount created successfully!")
