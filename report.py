@@ -13,3 +13,10 @@ def security_report():
     print("Password Strength :", strength)
     if strength == "Strong":
         print("Security Status   : Good")
+     elif strength == "Medium":
+        print("Security Status   : Moderate")
+        print("Recommendation    : Improve password.")
+    else:
+        print("Security Status   : Weak")
+        print("Recommendation    : Change password.")
+    print("=" * 40)
