@@ -56,3 +56,16 @@ def main():
         print("7. Security Report")
         print("8. Exit")
         choice = input("\nEnter your choice (1-8): ")
+         if choice == "1":
+            create_account()
+        elif choice == "2":
+            login()
+        elif choice == "3":
+            password_checker()
+        elif choice == "4":
+            password_generator()
+        elif choice == "5":
+            change_password()
+        elif choice == "6":
+            account_information()
+        elif choice == "7":
