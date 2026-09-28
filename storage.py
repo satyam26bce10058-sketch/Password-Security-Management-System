@@ -19,3 +19,5 @@ def load_user():
     if len(parts) == 2:
         return parts[0], parts[1]
     return None, None
+def update_user(username, password):
+    save_user(username, password)
