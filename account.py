@@ -74,3 +74,15 @@ def change_password():
         return
     while True:
         new_password = input("Enter new password: ")
+        valid, message = validate_password(new_password)
+        if not valid:
+            print(message)
+            continue
+        strength = check_strength(new_password)
+        print("New Password Strength:", strength)
+        if strength == "Weak":
+            print("Please choose a stronger password.")
+            continue
+        break
+    update_user(username, new_password)
+    print("Password changed successfully!")
