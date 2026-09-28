@@ -30,3 +30,18 @@ def create_account():
         break
     save_user(username, password)
     print("\nAccount created successfully!")
+def login():
+    print("\n--- LOGIN ---")
+    username, password = load_user()
+    if username is None:
+        print("No account found.")
+        print("Please create an account first.")
+        return False
+    attempts = 3
+    while attempts > 0:
+        entered_username = input("Username: ")
+        entered_password = input("Password: ")
+        if (
+            entered_username == username
+            and entered_password == password
+        ):
