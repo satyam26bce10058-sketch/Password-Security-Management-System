@@ -29,3 +29,15 @@ def password_generator():
         value = input(
             "Enter password length (minimum 8): "
         )
+valid, result = validate_length(value)
+        if not valid:
+            print(result)
+            continue
+        length = result
+        break
+    password = generate_password(length)
+    print("\nGenerated Password:", password)
+    print(
+        "Strength:",
+        check_strength(password)
+    )
