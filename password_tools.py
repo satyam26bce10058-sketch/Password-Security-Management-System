@@ -35,3 +35,18 @@ def password_suggestions(password):
 def generate_password(length):
     if length < 8:
         return None
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    numbers = string.digits
+    special = SPECIAL_CHARACTERS
+    password = [
+        random.choice(lower),
+        random.choice(upper),
+        random.choice(numbers),
+        random.choice(special)
+    ]
+    all_characters = lower + upper + numbers + special
+    for i in range(length - 4):
+        password.append(random.choice(all_characters))
+    random.shuffle(password)
+    return "".join(password)
