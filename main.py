@@ -41,3 +41,18 @@ def password_generator():
         "Strength:",
         check_strength(password)
     )
+def main():
+    while True:
+        print("\n")
+        print("=" * 50)
+        print("       PASSWORD SECURITY MANAGEMENT SYSTEM")
+        print("=" * 50)
+        print("\n1. Create Account")
+        print("2. Login")
+        print("3. Check Password Strength")
+        print("4. Generate Password")
+        print("5. Change Password")
+        print("6. Account Information")
+        print("7. Security Report")
+        print("8. Exit")
+        choice = input("\nEnter your choice (1-8): ")
