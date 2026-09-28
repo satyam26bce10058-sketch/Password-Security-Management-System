@@ -69,3 +69,13 @@ def main():
         elif choice == "6":
             account_information()
         elif choice == "7":
+            security_report()
+        elif choice == "8":
+            print("\nThank you for using the system!")
+            print("Goodbye!")
+            break
+        else:
+            print("\nInvalid choice.")
+            print("Please select a number from 1 to 8.")
+if __name__ == "__main__":
+    main()
