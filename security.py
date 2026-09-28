@@ -6,3 +6,11 @@ def verify_otp():
     print("\n--- 2-Step Verification ---")
     otp = generate_otp()
     print("Your OTP is:", otp)
+    entered_otp = input("Enter OTP: ")
+    if entered_otp == str(otp):
+        print("OTP verification successful!")
+        return True
+    print("Incorrect OTP.")
+    return False
+def login_attempts():
+    return MAX_ATTEMPTS
