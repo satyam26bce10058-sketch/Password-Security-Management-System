@@ -17,3 +17,15 @@ def password_checker():
     strength = check_strength(password)
     print("\nPassword Strength:", strength)
     suggestions = password_suggestions(password)
+    if suggestions:
+        print("\nSuggestions:")
+        for suggestion in suggestions:
+            print("-", suggestion)
+    else:
+        print("Password meets all basic requirements.")
+def password_generator():
+    print("\n--- PASSWORD GENERATOR ---")
+    while True:
+        value = input(
+            "Enter password length (minimum 8): "
+        )
