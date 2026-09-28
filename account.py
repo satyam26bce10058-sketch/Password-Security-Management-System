@@ -6,3 +6,16 @@ from storage import save_user
 from storage import load_user
 from storage import update_user
 from security import verify_otp
+def create_account():
+    print("\n--- CREATE ACCOUNT ---")
+    username = input("Enter username: ").strip()
+    valid, message = validate_username(username)
+    if not valid:
+        print(message)
+        return
+    while True:
+        password = input("Enter password: ")
+        valid, message = validate_password(password)
+        if not valid:
+            print(message)
+            continue
