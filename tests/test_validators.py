@@ -24,3 +24,5 @@ class TestValidators(unittest.TestCase):
     def test_invalid_length(self):
         result, value = validate_length("hello")
         self.assertFalse(result)
+if __name__ == "__main__":
+    unittest.main()
