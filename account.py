@@ -45,3 +45,18 @@ def login():
             entered_username == username
             and entered_password == password
         ):
+             print("\nPassword correct!")
+            if verify_otp():
+                print(
+                    "Login successful! Welcome,",
+                    username
+                )
+                return True
+            else:
+                print("Login failed.")
+                return False
+        else:
+            attempts -= 1
+            print("\nIncorrect username or password.")
+            if attempts > 0:
+                print("Attempts remaining:", attempts)
