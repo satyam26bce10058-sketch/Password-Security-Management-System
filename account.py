@@ -60,3 +60,17 @@ def login():
             print("\nIncorrect username or password.")
             if attempts > 0:
                 print("Attempts remaining:", attempts)
+    print("\nAccount temporarily locked.")
+    return False
+def change_password():
+    print("\n--- CHANGE PASSWORD ---")
+    username, old_password = load_user()
+    if username is None:
+        print("No account found.")
+        return
+    entered_old = input("Enter current password: ")
+    if entered_old != old_password:
+        print("Incorrect current password.")
+        return
+    while True:
+        new_password = input("Enter new password: ")
