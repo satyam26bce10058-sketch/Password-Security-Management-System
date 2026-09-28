@@ -86,3 +86,11 @@ def change_password():
         break
     update_user(username, new_password)
     print("Password changed successfully!")
+def account_information():
+    print("\n--- ACCOUNT INFORMATION ---")
+    username, password = load_user()
+    if username is None:
+        print("No account exists.")
+        return
+    print("Username:", username)
+    print("Password Strength:", check_strength(password))
