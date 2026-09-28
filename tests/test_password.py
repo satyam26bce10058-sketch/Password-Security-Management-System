@@ -10,3 +10,11 @@ class TestPasswordFunctions(unittest.TestCase):
     def test_strong_password(self):
         result = check_strength("Python@123")
         self.assertEqual(result, "Strong")
+    def test_password_length(self):
+        password = generate_password(12)
+        self.assertEqual(len(password), 12)
+    def test_short_password(self):
+        password = generate_password(5)
+        self.assertIsNone(password)
+if __name__ == "__main__":
+    unittest.main()
