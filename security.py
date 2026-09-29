@@ -12,5 +12,3 @@ def verify_otp():
         return True
     print("Incorrect OTP.")
     return False
-def login_attempts():
-    return MAX_ATTEMPTS
