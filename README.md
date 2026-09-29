@@ -180,17 +180,17 @@ Password-Security-Management-System/
 └── statement.md
 
 File Description
-File	Purpose
-main.py	Main menu and program workflow
-account.py	Account creation, login, password change and account information
-password_tools.py	Password strength checking, suggestions and password generation
-security.py	OTP generation and verification
-storage.py	Saving and loading account information
-validators.py	Username, password and length validation
-report.py	Security report
-tests/test_password.py	Password function unit tests
+File	                    Purpose
+main.py	                    Main menu and program workflow
+account.py                	Account creation, login, password change and account information
+password_tools.py	        Password strength checking, suggestions and password generation
+security.py                	OTP generation and verification
+storage.py                	Saving and loading account information
+validators.py            	Username, password and length validation
+report.py            	    Security report
+tests/test_password.py	    Password function unit tests
 tests/test_validators.py	Validation function unit tests
-data/users.txt	Stores the current account data
+data/users.txt            	Stores the current account data
 7. Requirements
 
 Before running the project, install:
