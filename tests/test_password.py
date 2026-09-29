@@ -14,7 +14,7 @@ class TestPasswordFunctions(unittest.TestCase):
         password = generate_password(12)
         self.assertEqual(len(password), 12)
     def test_short_password(self):
-         with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError):
             generate_password(5)
 if __name__ == "__main__":
     unittest.main()
