@@ -45,7 +45,7 @@ def login():
             entered_username == username
             and entered_password == password
         ):
-             print("\nPassword correct!")
+            print("\nPassword correct!")
             if verify_otp():
                 print(
                     "Login successful! Welcome,",
