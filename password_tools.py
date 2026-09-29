@@ -34,7 +34,7 @@ def password_suggestions(password):
     return suggestions
 def generate_password(length):
     if length < 8:
-        return None
+        raise ValueError("Password length must be at least 8 characters.")
     lower = string.ascii_lowercase
     upper = string.ascii_uppercase
     numbers = string.digits
