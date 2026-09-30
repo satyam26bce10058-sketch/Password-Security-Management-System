@@ -29,12 +29,16 @@ Learn how to write and run basic unit tests.
 
 3.1 Password Management
 
+The password management part of the project provides the following features:
+
 Check password strength.
 Get suggestions for improving a password.
 Generate passwords.
 Validate password length.
 
 3.2 Account Management
+
+The account management part provides the following features:
 
 Create an account.
 Log in.
@@ -43,6 +47,8 @@ Change password.
 View account information.
 
 3.3 Security and Reporting
+
+The security and reporting part provides the following features:
 
 OTP verification.
 Maximum 3 OTP attempts.
@@ -54,9 +60,9 @@ Password strength status.
 
 The project includes tests using Python's built-in unittest module.
 
-There are currently 10 tests:
-4 password-related tests.
-6 validation-related tests.
+There are currently 10 tests in total.
+
+There are 4 password-related tests and 6 validation-related tests.
 
 4. Main Functional Modules
 
@@ -64,26 +70,21 @@ The project can be divided into three main functional areas.
 
 4.1 Password Management
 
-This part handles password-related operations such as checking password strength, giving suggestions, and generating passwords.
+This part handles password-related operations such as checking password strength, giving suggestions, generating passwords, and validating password length.
 
-Files used:
-password_tools.py
-validators.py
+The main files used are password_tools.py and validators.py.
 
 4.2 Account Management
 
 This part handles creating an account, logging in, changing the password, and viewing account information.
 
-File used:
-account.py
+The main file used is account.py.
 
 4.3 Security and Reporting
 
-This part handles OTP verification and generates a simple report showing the current password strength.
+This part handles OTP verification, login attempt control, and generating a simple security report.
 
-Files used:
-security.py
-report.py
+The main files used are security.py and report.py.
 
 5. Technologies and Python Concepts Used
 
@@ -96,7 +97,7 @@ Command Prompt / Terminal
 
 5.2 Python Concepts
 
-During this project, I used and practiced:
+During this project, I used and practiced the following Python concepts:
 
 Variables
 Strings
@@ -104,7 +105,7 @@ Boolean values
 Lists
 Tuples
 Conditional statements
-if-else
+if-else statements
 while loops
 for loops
 Functions
@@ -117,62 +118,47 @@ unittest
 
 6. Project Structure
 
-Password-Security-Management-System/
-│
-├── data/
-│   └── users.txt
-│
-├── tests/
-│   ├── test_password.py
-│   └── test_validators.py
-│
-├── README.md
-├── statement.md
-├── main.py
-├── account.py
-├── password_tools.py
-├── report.py
-├── security.py
-├── storage.py
-└── validators.py
+The project is organized into separate folders and Python files.
 
-6.1 File Description
+6.1 Main Program Files
 
-main.py
-Displays the main menu and controls the program workflow.
+main.py is responsible for displaying the main menu and controlling the program workflow.
 
-account.py
-Handles account creation, login, password change, and account information.
+account.py handles account creation, login, password change, and account information.
 
-password_tools.py
-Checks password strength, provides suggestions, and generates passwords.
+password_tools.py handles password strength checking, password suggestions, and password generation.
 
-security.py
-Generates and verifies OTPs.
+security.py handles OTP generation and verification.
 
-storage.py
-Saves and loads account information from the text file.
+storage.py handles saving and loading account information.
 
-validators.py
-Validates usernames, passwords, and password length.
+validators.py handles username, password, and password length validation.
 
-report.py
-Generates the basic security report.
+report.py generates the basic security report.
 
-tests/test_password.py
-Tests password-related functions.
+6.2 Testing Files
 
-tests/test_validators.py
-Tests validation functions.
+The tests folder contains the unit tests used for the project.
 
-data/users.txt
-Stores the current account information.
+test_password.py contains tests for password-related functions.
+
+test_validators.py contains tests for validation functions.
+
+6.3 Data File
+
+The data folder contains users.txt.
+
+The users.txt file stores the current account information used by the program.
+
+6.4 Documentation Files
+
+README.md contains information about the project, features, installation, usage, and testing.
+
+statement.md contains the problem statement, scope, target users, and high-level features.
 
 7. Requirements
 
-7.1 Required Software
-
-Python 3
+To run this project, you need Python 3 installed on your computer.
 
 No external Python libraries are required.
 
@@ -190,14 +176,13 @@ Open Command Prompt or Terminal in the project folder.
 
 8.3 Step 3: Start the Program
 
-Run:
+Run the following command:
 
 python main.py
 
-The program will display the following menu:
+The program will display the main menu.
 
-==================================================
-PASSWORD SECURITY MANAGEMENT SYSTEM
+The available options are:
 
 Create Account
 
@@ -223,42 +208,29 @@ The project uses Python's built-in unittest module.
 
 9.1 Password Tests
 
-Run:
+Run the following command:
 
 python -m unittest tests.test_password
 
-The test file contains 4 tests.
+The password test file contains 4 tests.
 
-Expected result:
-
-....
-
-Ran 4 tests in ...s
-
-OK
+The expected result is that all 4 tests pass successfully.
 
 9.2 Validation Tests
 
-Run:
+Run the following command:
 
 python -m unittest tests.test_validators
 
-The test file contains 6 tests.
+The validation test file contains 6 tests.
 
-Expected result:
-
-......
-
-Ran 6 tests in ...s
-
-OK
+The expected result is that all 6 tests pass successfully.
 
 9.3 Test Summary
 
-A total of 10 tests are included in the project.
+The project contains 10 automated tests in total.
 
-4 password tests.
-6 validation tests.
+There are 4 password tests and 6 validation tests.
 
 All 10 tests were successfully run on my local computer.
 
@@ -266,14 +238,21 @@ All 10 tests were successfully run on my local computer.
 
 The program checks several types of invalid input.
 
-Empty usernames.
-Usernames shorter than 3 characters.
-Usernames containing spaces.
-Passwords shorter than 8 characters.
-Password generator lengths below 8.
-Non-numeric password lengths.
-Incorrect login details.
-Incorrect OTP entries.
+Empty usernames are rejected.
+
+Usernames shorter than 3 characters are rejected.
+
+Usernames containing spaces are rejected.
+
+Passwords shorter than 8 characters are rejected.
+
+Password generator lengths below 8 are rejected.
+
+Non-numeric password lengths are handled.
+
+Incorrect login details are rejected.
+
+Incorrect OTP entries are handled.
 
 The program displays a message when the user enters invalid information and asks for valid input where appropriate.
 
@@ -281,11 +260,11 @@ The program displays a message when the user enters invalid information and asks
 
 11.1 Usability
 
-The project uses a simple numbered menu, making it easy to understand and operate from the command line.
+The project uses a simple numbered command-line menu, making it easy to understand and operate.
 
 11.2 Performance
 
-The program works with a small amount of data and performs simple operations such as password checking and reading or writing a text file. These operations are expected to complete quickly for the intended use of the project.
+The program works with a small amount of data and performs simple operations such as password checking and reading or writing a text file. These operations are suitable for the intended educational use of the project.
 
 11.3 Security
 
@@ -299,56 +278,43 @@ The program uses input validation and basic error handling to reduce problems ca
 
 11.5 Maintainability
 
-The code is divided into separate Python files. For example, password functions are kept in password_tools.py, validation functions are kept in validators.py, and account operations are kept in account.py.
+The code is divided into separate Python files. Each file has a specific responsibility, which makes the project easier to understand and modify.
 
-This makes the code easier to understand and modify.
+11.6 Error Handling
+
+The program handles common invalid inputs such as invalid password length, non-numeric password length, invalid username, incorrect login credentials, and incorrect OTP entries.
 
 12. User Workflow
 
-The general workflow of the program is:
+The user first starts the program and reaches the main menu.
 
-Start
-|
-v
-Main Menu
-|
-+----> Create Account
-|
-+----> Login
-| |
-| +----> Username & Password
-| |
-| +----> OTP Verification
-|
-+----> Check Password Strength
-|
-+----> Generate Password
-|
-+----> Change Password
-|
-+----> Account Information
-|
-+----> Security Report
-|
-+----> Exit
+From the main menu, the user can choose to create an account, log in, check password strength, generate a password, change the password, view account information, generate a security report, or exit the program.
+
+When creating an account, the user enters a username and password. The program validates the username and password and checks the password strength before saving the account information.
+
+When logging in, the user enters the username and password. If the details are correct, the program asks for an OTP. The user must enter the correct OTP to complete the login.
+
+The user can also check the strength of any password without creating an account.
+
+The password generator allows the user to enter a desired password length and generates a password containing different types of characters.
+
+The change password option allows the user to enter the current password and then create a new password.
+
+The account information option displays the username and current password strength.
+
+The security report displays the username, password strength, and a basic security status.
+
+The user can exit the application by selecting the Exit option from the main menu.
 
 13. Testing Results
 
-I tested the project using Python's unittest module.
+I tested the project using Python's built-in unittest module.
 
-13.1 Password Tests
+The password tests completed successfully with 4 tests passed.
 
-Ran 4 tests
-OK
+The validation tests completed successfully with 6 tests passed.
 
-13.2 Validation Tests
-
-Ran 6 tests
-OK
-
-13.3 Total
-
-10 tests passed.
+A total of 10 tests passed successfully.
 
 The tests were run locally before preparing the project for submission.
 
@@ -357,10 +323,15 @@ The tests were run locally before preparing the project for submission.
 Since this is a beginner-level educational project, it has some limitations.
 
 Account information is stored in a text file.
+
 Passwords are stored as plain text.
+
 OTP is simulated by displaying the OTP in the terminal.
+
 The project currently supports only one stored account.
-It does not use a database.
+
+The project does not use a database.
+
 The password generator uses Python's random module and is intended for learning purposes rather than real-world password generation.
 
 15. Future Improvements
