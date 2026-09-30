@@ -14,59 +14,39 @@ Note: This project is made for educational purposes. It is not intended to be us
 The main objectives of this project are:
 
 Check whether a password is Weak, Medium, or Strong.
-
 Give suggestions when a password can be improved.
-
 Generate a password based on the length entered by the user.
-
 Create and manage a basic user account.
-
 Provide a simple login system with OTP verification.
-
 Allow the user to change their password.
-
 Display basic account security information.
-
 Practice using functions and separate Python modules.
-
 Practice file handling and input validation.
-
 Learn how to write and run basic unit tests.
 
 3. Features
 Password Management
 
-Check password strength
-
-Get suggestions for improving a password
-
-Generate passwords
-
-Validate password length
+Check password strength.
+Get suggestions for improving a password.
+Generate passwords.
+Validate password length.
 
 Account Management
 
-Create an account
-
-Log in
-
-Verify username and password
-
-Change password
-
-View account information
+Create an account.
+Log in.
+Verify username and password.
+Change password.
+View account information.
 
 Security and Report
 
-OTP verification
-
-Maximum 3 OTP attempts
-
-Maximum 3 login attempts
-
-Basic security report
-
-Password strength status
+OTP verification.
+Maximum 3 OTP attempts.
+Maximum 3 login attempts.
+Basic security report.
+Password strength status.
 
 Testing
 
@@ -74,9 +54,8 @@ The project includes tests using Python's built-in unittest module.
 
 There are currently 10 tests:
 
-4 password-related tests
-
-6 validation-related tests
+4 password-related tests.
+6 validation-related tests.
 
 4. Main Functional Modules
 
@@ -112,11 +91,8 @@ report.py
 Tools
 
 Python 3
-
 Git
-
 GitHub
-
 Command Prompt / Terminal
 
 Python Concepts
@@ -124,35 +100,20 @@ Python Concepts
 During this project, I used and practiced:
 
 Variables
-
 Strings
-
 Boolean values
-
 Lists
-
 Tuples
-
 Conditional statements
-
 if-else
-
 while loops
-
 for loops
-
 Functions
-
 User-defined modules
-
 File handling
-
 Exception handling
-
 String methods
-
 Built-in functions
-
 unittest
 
 6. Project Structure
@@ -187,7 +148,6 @@ report.py	Generates the basic security report
 tests/test_password.py	Tests password-related functions
 tests/test_validators.py	Tests validation functions
 data/users.txt	Stores the current account information
-.gitignore	Prevents Python cache files from being uploaded to Git
 7. Requirements
 
 To run this project, you need:
@@ -274,33 +234,23 @@ Test Summary
 
 A total of 10 tests are included in the project:
 
-4 password tests
-
-6 validation tests
+4 password tests.
+6 validation tests.
 
 All 10 tests were successfully run on my local computer.
 
 10. Input Validation and Error Handling
 
-The program checks several types of invalid input.
+The program checks several types of invalid input:
 
-For example:
-
-Empty usernames are rejected.
-
-Usernames shorter than 3 characters are rejected.
-
-Usernames containing spaces are rejected.
-
-Passwords shorter than 8 characters are rejected.
-
-Password generator lengths below 8 are rejected.
-
-Non-numeric password lengths are handled.
-
-Incorrect login details are rejected.
-
-Incorrect OTP entries are handled.
+Empty usernames.
+Usernames shorter than 3 characters.
+Usernames containing spaces.
+Passwords shorter than 8 characters.
+Password generator lengths below 8.
+Non-numeric password lengths.
+Incorrect login details.
+Incorrect OTP entries.
 
 The program displays a message when the user enters invalid information and asks for valid input where appropriate.
 
@@ -381,15 +331,10 @@ The tests were run locally before preparing the project for submission.
 Since this is a beginner-level educational project, it has some limitations:
 
 Account information is stored in a text file.
-
 Passwords are stored as plain text.
-
 OTP is simulated by displaying the OTP in the terminal.
-
 The project currently supports only one stored account.
-
 It does not use a database.
-
 The password generator uses Python's random module and is intended for learning purposes rather than real-world password generation.
 
 15. Future Improvements
@@ -397,19 +342,12 @@ The password generator uses Python's random module and is intended for learning 
 If I continue developing this project, some possible improvements would be:
 
 Add password hashing.
-
 Store users in a database.
-
 Support multiple user accounts.
-
 Improve OTP handling.
-
 Add more advanced password checks.
-
 Create a graphical user interface.
-
 Add more automated tests.
-
 Improve the overall account management system.
 
 16. Project Purpose
