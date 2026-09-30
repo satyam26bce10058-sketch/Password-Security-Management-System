@@ -120,11 +120,11 @@ unittest
 Password-Security-Management-System/
 │
 ├── data/
-│ └── users.txt
+│   └── users.txt
 │
 ├── tests/
-│ ├── test_password.py
-│ └── test_validators.py
+│   ├── test_password.py
+│   └── test_validators.py
 │
 ├── README.md
 ├── statement.md
