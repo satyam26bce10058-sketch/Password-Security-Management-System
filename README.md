@@ -1,153 +1,115 @@
 Password Security Management System
 1. Project Overview
 
-The Password Security Management System is a beginner-level Python command-line project developed to demonstrate basic password security, account management, validation, file handling, and testing concepts.
+The Password Security Management System is a beginner-level Python project that I created to practice the concepts I learned in my Python Essentials course.
 
-The system allows users to:
+It is a command-line application that focuses on basic password management and account security. The user can check the strength of a password, generate a new password, create an account, log in, change the password, and view a simple security report.
 
-Check password strength
+The project also includes basic input validation, file handling, OTP verification, and unit testing.
 
-Get suggestions for improving weak passwords
-
-Generate passwords
-
-Create an account
-
-Log in using username, password, and OTP verification
-
-Change their password
-
-View account information
-
-Generate a basic security report
-
-This project was developed using Python concepts learned during the Python Essentials course.
-
-Note: This is an educational project and is not intended to be used as a production-level password management system.
+Note: This project is made for educational purposes. It is not intended to be used as a real password management or security system.
 
 2. Objectives
 
 The main objectives of this project are:
 
-To check the strength of a password.
+Check whether a password is Weak, Medium, or Strong.
 
-To provide suggestions for improving weak passwords.
+Give suggestions when a password can be improved.
 
-To generate passwords of a user-selected length.
+Generate a password based on the length entered by the user.
 
-To allow users to create and manage a basic account.
+Create and manage a basic user account.
 
-To provide login verification using an OTP simulation.
+Provide a simple login system with OTP verification.
 
-To allow users to change their password.
+Allow the user to change their password.
 
-To provide a basic security report.
+Display basic account security information.
 
-To demonstrate modular Python programming.
+Practice using functions and separate Python modules.
 
-To demonstrate input validation and file handling.
+Practice file handling and input validation.
 
-To demonstrate unit testing.
+Learn how to write and run basic unit tests.
 
 3. Features
 Password Management
 
-Password strength checker
+Check password strength
 
-Password improvement suggestions
+Get suggestions for improving a password
 
-Password generator
+Generate passwords
 
-Password length validation
+Validate password length
 
 Account Management
 
-Create account
+Create an account
 
-Login
+Log in
 
-Password verification
+Verify username and password
 
 Change password
 
-Account information
+View account information
 
-Security and Reporting
+Security and Report
 
-OTP verification simulation
+OTP verification
 
-Maximum three OTP attempts
+Maximum 3 OTP attempts
 
-Login attempt limitation
+Maximum 3 login attempts
 
-Security report
+Basic security report
 
 Password strength status
 
 Testing
 
-Unit testing using Python's unittest module
+The project includes tests using Python's built-in unittest module.
 
-Validation testing
+There are currently 10 tests:
 
-10 automated tests
+4 password-related tests
 
-4. Functional Modules
+6 validation-related tests
 
-The project contains three major functional modules.
+4. Main Functional Modules
 
-Module 1: Password Management
+The project can be divided into three main functional areas.
 
-This module provides:
+1. Password Management
 
-Password strength checking
+This part of the project handles password-related operations such as checking password strength, giving suggestions, and generating passwords.
 
-Password improvement suggestions
-
-Password generation
-
-Password length validation
-
-Main files:
+Files used:
 
 password_tools.py
 validators.py
 
-Module 2: Account Management
+2. Account Management
 
-This module provides:
+This part handles creating an account, logging in, changing the password, and viewing account information.
 
-Account creation
-
-Login
-
-Password change
-
-Account information
-
-Main file:
+File used:
 
 account.py
 
-Module 3: Security and Reporting
+3. Security and Reporting
 
-This module provides:
+This part handles OTP verification and generates a simple report showing the current password strength.
 
-OTP verification
-
-Login attempt control
-
-Password security report
-
-Password strength status
-
-Main files:
+Files used:
 
 security.py
 report.py
 
 5. Technologies and Python Concepts Used
-Technologies
+Tools
 
 Python 3
 
@@ -159,9 +121,9 @@ Command Prompt / Terminal
 
 Python Concepts
 
-Variables
+During this project, I used and practiced:
 
-Data types
+Variables
 
 Strings
 
@@ -172,6 +134,8 @@ Lists
 Tuples
 
 Conditional statements
+
+if-else
 
 while loops
 
@@ -201,7 +165,6 @@ Password-Security-Management-System/
 │   ├── test_password.py
 │   └── test_validators.py
 │
-├── .gitignore
 ├── README.md
 ├── statement.md
 ├── main.py
@@ -213,45 +176,49 @@ Password-Security-Management-System/
 └── validators.py
 
 File Description
-File	Purpose
-main.py	Main menu and program workflow
-account.py	Account creation, login, password change, and account information
-password_tools.py	Password strength checking, suggestions, and password generation
-security.py	OTP generation and verification
-storage.py	Saving and loading account information
-validators.py	Username, password, and length validation
-report.py	Security report
-tests/test_password.py	Password function unit tests
-tests/test_validators.py	Validation function unit tests
-data/users.txt	Stores the current account data
-.gitignore	Prevents Python cache files from being tracked
+File	Description
+main.py	Displays the main menu and controls the program workflow
+account.py	Handles account creation, login, password change, and account information
+password_tools.py	Checks password strength, provides suggestions, and generates passwords
+security.py	Generates and verifies OTPs
+storage.py	Saves and loads account information from the text file
+validators.py	Validates usernames, passwords, and password length
+report.py	Generates the basic security report
+tests/test_password.py	Tests password-related functions
+tests/test_validators.py	Tests validation functions
+data/users.txt	Stores the current account information
+.gitignore	Prevents Python cache files from being uploaded to Git
 7. Requirements
 
-Before running the project, install:
+To run this project, you need:
 
 Python 3
 
-No external Python packages are required.
+No external Python libraries are required.
 
-Git is optional if the project is downloaded as a ZIP file.
+Git is only needed if you want to clone or manage the project using Git.
 
-8. How to Run the Project
+8. How to Run
 Step 1: Download the Project
 
-Download or clone the GitHub repository to your computer.
+Download the project from GitHub or clone the repository.
 
 Step 2: Open the Project Folder
 
-Open Command Prompt or Terminal inside the project folder.
+Open Command Prompt or Terminal in the project folder.
 
-Step 3: Run the Program
+Step 3: Start the Program
 
-Use:
+Run:
 
 python main.py
 
 
-The main menu will appear:
+The program will display the following menu:
+
+==================================================
+       PASSWORD SECURITY MANAGEMENT SYSTEM
+==================================================
 
 1. Create Account
 2. Login
@@ -263,16 +230,20 @@ The main menu will appear:
 8. Exit
 
 
-Select an option by entering the corresponding number.
+Enter the number of the option you want to use.
 
-9. How to Run Tests
+9. How to Run the Tests
 
-The project uses Python's built-in unittest framework.
+The project uses Python's built-in unittest module.
 
-Run the password tests:
+Password Tests
+
+Run:
 
 python -m unittest tests.test_password
 
+
+The test file contains 4 tests.
 
 Expected result:
 
@@ -282,11 +253,14 @@ Ran 4 tests in ...s
 
 OK
 
+Validation Tests
 
-Run the validation tests:
+Run:
 
 python -m unittest tests.test_validators
 
+
+The test file contains 6 tests.
 
 Expected result:
 
@@ -296,84 +270,68 @@ Ran 6 tests in ...s
 
 OK
 
-Total Tests
+Test Summary
 
-The project contains 10 automated tests:
+A total of 10 tests are included in the project:
 
 4 password tests
 
 6 validation tests
 
-All 10 tests have been successfully tested locally.
+All 10 tests were successfully run on my local computer.
 
 10. Input Validation and Error Handling
 
-The project performs basic validation for:
+The program checks several types of invalid input.
 
-Empty usernames
+For example:
 
-Short usernames
+Empty usernames are rejected.
 
-Usernames containing spaces
+Usernames shorter than 3 characters are rejected.
 
-Short passwords
+Usernames containing spaces are rejected.
 
-Invalid password lengths
+Passwords shorter than 8 characters are rejected.
 
-Password generator lengths below 8
+Password generator lengths below 8 are rejected.
 
-Incorrect login credentials
+Non-numeric password lengths are handled.
 
-Incorrect OTP entries
+Incorrect login details are rejected.
 
-The program displays messages to help the user correct invalid input.
+Incorrect OTP entries are handled.
+
+The program displays a message when the user enters invalid information and asks for valid input where appropriate.
 
 11. Non-Functional Requirements
 Usability
 
-The system provides a simple numbered command-line menu so that users can easily understand the available options.
+The project uses a simple numbered menu, making it easy to understand and operate from the command line.
 
 Performance
 
-The application performs small operations such as password checking, file reading, and file writing. These operations are suitable for the small amount of data used by this educational project.
+The program works with a small amount of data and performs simple operations such as password checking and reading or writing a text file. These operations are expected to complete quickly for the intended use of the project.
 
 Security
 
-The system includes:
+The project includes basic security-related features such as password strength checking, login attempt limits, and OTP verification.
 
-Password strength checking
-
-Login attempt limitation
-
-OTP verification simulation
-
-The project is educational and does not implement production-level password encryption or hashing.
+However, passwords are stored as plain text because this is a beginner educational project. Password hashing and encryption are outside the current scope.
 
 Reliability
 
-Input validation and basic error handling are used to reduce invalid input and unexpected program behavior.
+The program uses input validation and basic error handling to reduce problems caused by invalid user input.
 
 Maintainability
 
-The program is divided into multiple Python modules. Each module has a specific responsibility, making the project easier to understand and modify.
+The code is divided into separate Python files. For example, password functions are kept in password_tools.py, validation functions are kept in validators.py, and account operations are kept in account.py.
 
-Error Handling
-
-The program handles invalid input such as:
-
-Invalid password length
-
-Non-numeric password length
-
-Invalid username
-
-Incorrect login credentials
-
-Incorrect OTP
+This makes the code easier to understand and modify.
 
 12. User Workflow
 
-The basic workflow is:
+The general workflow of the program is:
 
 Start
   |
@@ -384,7 +342,7 @@ Main Menu
   |
   +----> Login
   |        |
-  |        +----> Username & Password Verification
+  |        +----> Username & Password
   |        |
   |        +----> OTP Verification
   |
@@ -400,9 +358,9 @@ Main Menu
   |
   +----> Exit
 
-13. Testing Result
+13. Testing Results
 
-The project was tested using Python's built-in unittest framework.
+I tested the project using Python's unittest module.
 
 Password Tests
 Ran 4 tests
@@ -415,62 +373,49 @@ OK
 Total
 10 tests passed
 
+
+The tests were run locally before preparing the project for submission.
+
 14. Limitations
 
-This project is designed for learning and demonstration purposes.
-
-Current limitations include:
+Since this is a beginner-level educational project, it has some limitations:
 
 Account information is stored in a text file.
 
-Passwords are not encrypted or hashed.
+Passwords are stored as plain text.
 
 OTP is simulated by displaying the OTP in the terminal.
 
-Only a basic account storage system is implemented.
+The project currently supports only one stored account.
 
-The application is designed for a single stored account.
+It does not use a database.
 
-The password generator uses Python's random module and is intended for educational demonstration rather than production security.
+The password generator uses Python's random module and is intended for learning purposes rather than real-world password generation.
 
 15. Future Improvements
 
-Possible future improvements include:
+If I continue developing this project, some possible improvements would be:
 
-Password hashing
+Add password hashing.
 
-Secure password storage
+Store users in a database.
 
-Multiple user accounts
+Support multiple user accounts.
 
-Database storage instead of a text file
+Improve OTP handling.
 
-More advanced password security checks
+Add more advanced password checks.
 
-Improved OTP handling
+Create a graphical user interface.
 
-Graphical user interface
+Add more automated tests.
 
-More extensive automated testing
+Improve the overall account management system.
 
 16. Project Purpose
 
-This project demonstrates how basic Python programming concepts can be combined to create a complete modular command-line application.
+I created this project to apply the Python concepts I learned in the Python Essentials course to a small practical application.
 
-It was developed as an educational project to practice:
+While developing it, I practiced functions, modules, conditions, loops, data structures, file handling, validation, exception handling, and unit testing.
 
-Python programming
-
-Functions
-
-Modules
-
-File handling
-
-Validation
-
-Control flow
-
-Exception handling
-
-Unit testing
+The project helped me understand how individual Python concepts can be combined to create a complete command-line application.
